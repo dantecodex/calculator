@@ -71,6 +71,7 @@ button {
     color: white;
     border: none;
     transition: 0.2s;
+    cursor: pointer;
 }
 
 button:hover {
