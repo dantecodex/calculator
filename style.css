@@ -42,6 +42,7 @@ input {
     text-align: right;
     background-color: transparent;
     color: white;
+    user-select: none;
 }
 
 input:focus {
