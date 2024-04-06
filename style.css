@@ -92,7 +92,7 @@ button::after {
     margin-left: -20px !important;
     margin-top: -155%;
     opacity: 0;
-    transition: all 0.8s;
+    transition: 0.8s;
     animation: swipe 0.8s ease 1 reverse;
 }
 
@@ -115,4 +115,11 @@ button:active::after {
 
 #item-submit::after {
     background: var(--primary-color) !important;
+}
+
+button.active::after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
 }

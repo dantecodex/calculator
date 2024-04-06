@@ -56,7 +56,7 @@ function checkoperators(value) {
 document.body.addEventListener("keydown", (value) => {
     if (document.activeElement)
         document.activeElement.blur();
-
+    const button = document.querySelector(`button[value='${value.key}']`);
 
     if (isEnterPressed && value.key === '0') {
         clearInput();
@@ -72,5 +72,14 @@ document.body.addEventListener("keydown", (value) => {
 
     else if (checkoperators(value.key))
         assign(value.key);
+
+
+    if (button) {
+        console.log("trigger");
+        button.classList.add('active');
+        setTimeout(() => {
+            button.classList.remove('active');
+        }, 10);
+    }
 
 });
